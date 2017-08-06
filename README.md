@@ -18,6 +18,16 @@ Homebrew gives some instructions for linking to the keg-only package,
 I won't cover that here now because it depends a lot on what is used
 for build tooling.
 
+Use homebrew-installed libraries with `pkg-config` by adding the
+library's pkgconfig directory to PKG\_CONFIG\_PATH.
+
+```
+export PKG_CONFIG_PATH="/usr/local/opt/opencv3/lib/pkgconfig/:$PKG_CONFIG_PATH"
+```
+
+This can be loaded anywhere, but I recommend a tool like [direnv](https://direnv.net/)
+or some other environment-file loader tool.
+
 ## Goal
 
 Just tinkering in C++ with OpenCV. Primarily trying to build something
