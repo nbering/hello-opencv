@@ -41,7 +41,7 @@ int main() {
     }
 
     if (ids.size() == 2) {
-      cv::rectangle(imageCopy, corners[0][0], corners[1][0],
+      rectangle(imageCopy, corners[0][0], corners[1][0],
                     Scalar(100, 0, 255));
     }
 
@@ -51,7 +51,7 @@ int main() {
 
     imshow("Marker", markerImage);
 
-    keyCode = waitKey(1000);
+    keyCode = waitKey(1);
 
     switch (keyCode) {
       case 123:
